@@ -5,21 +5,23 @@ export default {
     extend: {
       colors: {
         olive: {
-          50: '#f9faf5',
-          100: '#f1f4e8',
-          200: '#e0e7cc',
-          300: '#c5d3a3',
-          400: '#a7bc77',
-          500: '#8ba354',
-          600: '#708542',
-          700: '#576735',
-          800: '#48532d',
-          900: '#3d4527',
+          50: '#F9F9F9', // Branco sujo
+          100: '#F1F1F1', // Cinza muito claro
+          200: '#D1D1D1', // Cinza suave
+          300: '#B0B0B0', // Cinza médio
+          400: '#8F8F8F', // Cinza escuro
+          500: '#6E6E6E', // Cinza mais escuro
+          600: '#4D4D4D', // Cinza profundo
+          700: '#333333', // Cinza muito escuro
+          800: '#1A1A1A', // Quase preto
+          900: '#0A0A0A', // Preto
         },
       },
       fontFamily: {     
-        sans: ['Montserrat', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'], // Fonte sofisticada para títulos
+        sans: ['Helvetica Neue', 'Arial', 'sans-serif'], // Fonte limpa e moderna
       },
+      
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
         'sm': ['0.813rem', { lineHeight: '1.25rem' }],

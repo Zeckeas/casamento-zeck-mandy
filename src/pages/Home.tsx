@@ -40,26 +40,22 @@ function Home() {
 
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="hero-section h-screen flex items-center justify-center px-4 md:px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
-        <div className="relative text-center text-white w-full max-w-4xl mx-auto">
-          <div className="mb-8">
-            <img 
-              src="https://i.imgur.com/ssDvKgX.png" 
-              alt="Brasão Héricles & Bruna" 
-              className="w-32 h-32 md:w-48 md:h-48 mx-auto mb-6 animate-fade-in"
-            />
+       {/* Hero Section */}
+        <section className="hero-section h-screen flex items-center justify-center px-4 md:px-6 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
+          <div className="relative text-center text-white w-full max-w-4xl mx-auto">
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-4 leading-tight font-bold tracking-wider border-b-4 border-white pb-4">
+              Ezequiel & Amanda
+            </h1>
+            <p className="text-xl md:text-2xl mb-12 font-light tracking-widest">06 de Setembro de 2025</p>
+            <div className="max-w-xs md:max-w-2xl mx-auto">
+              <div className="border-none"> {/* Garantindo que não haja borda */}
+                <CountdownTimer targetDate="2025-09-06T14:30:00" />
+              </div>
+            </div>
           </div>
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-4 leading-tight font-bold tracking-wider">
-            Héricles & Bruna
-          </h1>
-          <p className="text-xl md:text-2xl mb-12 font-light tracking-widest">19 de julho de 2025</p>
-          <div className="max-w-xs md:max-w-2xl mx-auto">
-            <CountdownTimer targetDate="2025-07-19T14:30:00" />
-          </div>
-        </div>
-      </section>
+        </section>
+
 
       {/* Welcome Section - Reduced padding */}
       <section className="py-8 px-4 md:px-6 bg-white">
@@ -76,9 +72,9 @@ function Home() {
             </p>
             <div className="pt-4">
               <p className="font-serif text-2xl text-olive-600 italic">
-                "O amor é paciente, o amor é bondoso... Tudo sofre, tudo crê, tudo espera, tudo suporta."
+                "Procurar frase"
               </p>
-              <p className="text-sm mt-2 text-olive-600">1 Coríntios 13:4,7</p>
+              <p className="text-sm mt-2 text-olive-600">Nome</p>
             </div>
           </div>
         </div>
@@ -95,20 +91,19 @@ function Home() {
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12">
             <div className="flex flex-col md:flex-row gap-8">
               <div className="md:w-1/2">
-                <div className="flex items-center gap-4 mb-6">
-                  <ChurchIcon className="w-8 h-8 text-olive-600" />
-                  <h3 className="font-serif text-2xl text-olive-800">Cerimônia Religiosa</h3>
+                <div className="flex items-center gap-4 mb-6">                
+                  <h3 className="font-serif text-2xl text-olive-800">Cerimônia & Recepção</h3>
                 </div>
                 <div className="space-y-4 text-gray-600">
-                  <p className="font-medium text-lg">Paróquia Nossa Senhora do Perpétuo Socorro</p>
-                  <p>St. de Habitações Individuais Sul EQL 6/8 - Lago Sul, Brasília - DF</p>
-                  <p>CEP: 71620-410</p>
+                  <p className="font-medium text-lg">Roça Cult</p>
+                  <p>NR Cavas - Chácara Santa Rita de Cássia e Chácara São Jo - BR 251, Km 29 - São Sebastião, Brasília - DF</p>
+                  <p>CEP: 71600-000</p>
                   <p className="flex items-center gap-2">
                     <Clock className="w-5 h-5 text-olive-600" />
-                    <span>14:30</span>
+                    <span>11:00</span>
                   </p>
                   <a
-                    href="https://maps.app.goo.gl/VqgcaBKHtUTZZ2VL7"
+                    href="https://maps.app.goo.gl/GWQRZ6fQKQSWoqSU7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-olive-600 hover:text-olive-800 transition-colors"
@@ -120,51 +115,8 @@ function Home() {
               </div>
               <div className="md:w-1/2">
                 <img
-                  src="https://lh3.googleusercontent.com/p/AF1QipP9AwwJdS7hwJiXG4TrcSinB2BpVb6qBZ_9aTc3=s1360-w1360-h1020"
-                  alt="Paróquia Nossa Senhora do Perpétuo Socorro"
-                  className="w-full h-64 object-cover rounded-lg"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Recepção */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-            <div className="flex flex-col md:flex-row gap-8">
-              <div className="md:w-1/2">
-                <div className="flex items-center gap-4 mb-6">
-                  <PartyPopper className="w-8 h-8 text-olive-600" />
-                  <h3 className="font-serif text-2xl text-olive-800">Recepção</h3>
-                </div>
-                <div className="space-y-4 text-gray-600">
-                  <p className="font-medium text-lg">Casa Volpi</p>
-                  <p>SMPW Q 4 Conjunto 8 Lote 05, Parte 1, Brasília - DF</p>
-                  <p>CEP: 71735-408</p>
-                  <p className="flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-olive-600" />
-                    <span>16:00 às 22:00</span>
-                  </p>
-                  <div className="flex flex-col gap-2">
-                    <a
-                      href="https://www.google.com/maps/place/CASA+VOLPI/data=!4m2!3m1!1s0x0:0x688ff25d26368b84"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-olive-600 hover:text-olive-800 transition-colors"
-                    >
-                      <MapPin className="w-5 h-5" />
-                      <span>Ver no Google Maps</span>
-                    </a>
-                    <div className="flex items-center gap-2 text-olive-600">
-                      <Car className="w-5 h-5" />
-                      <span>Estacionamento gratuito no local</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="md:w-1/2">
-                <img
-                  src="https://lh3.googleusercontent.com/p/AF1QipNXZV8BvUirqc5dMA1WTbs5K2xZY5wg9r_uSIUl=s1360-w1360-h1020"
-                  alt="Casa Volpi"
+                  src="https://lh3.googleusercontent.com/p/AF1QipOqMySkL0M-_Z4YyD5a5QRcdtQPh7_ySDeG0-AN=s680-w680-h510"
+                  alt="Roça Cult"
                   className="w-full h-64 object-cover rounded-lg"
                 />
               </div>
@@ -295,22 +247,22 @@ function Home() {
               <h3 className="font-serif text-xl mb-6 text-olive-100">Os Noivos</h3>
               <div className="space-y-3">
                 <a
-                  href="https://www.instagram.com/hericlesssssss/"
+                  href="https://www.instagram.com/eu.zeck/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm hover:text-olive-200 transition-colors"
                  >
                   <Instagram className="w-4 h-4" />
-                  <span>@hericlesssssss</span>
+                  <span>@eu.zeck</span>
                 </a>
                 <a
-                  href="https://www.instagram.com/brunanognun/"
+                  href="https://www.instagram.com/hi.mandy15/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm hover:text-olive-200 transition-colors"
                 >
                   <Instagram className="w-4 h-4" />
-                  <span>@brunanognun</span>
+                  <span>@hi.mandy15</span>
                 </a>
               </div>
             </div>
@@ -321,24 +273,15 @@ function Home() {
               <div className="space-y-3 text-sm">
                 <p className="font-medium">Cerimônia</p>
                 <a
-                  href="https://www.google.com/maps/dir//par%C3%B3quia+nossa+senhora+dO+PERPETUO+SOCORRO+lago+sul/@-15.8442479,-47.9366699,13z"
+                  href="https://maps.app.goo.gl/GWQRZ6fQKQSWoqSU7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-2 hover:text-olive-200 transition-colors"
                 >
                   <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span>Paróquia Nossa Senhora do Perpétuo Socorro, St. de Habitações Individuais Sul EQL 6/8</span>
+                  <span>NR Cavas - Chácara Santa Rita de Cássia e Chácara São Jo - BR 251, Km 29 - São Sebastião, Brasília - DF</span>
                 </a>
-                <p className="font-medium mt-4">Recepção</p>
-                <a
-                  href="https://www.google.com/maps/place/CASA+VOLPI/data=!4m2!3m1!1s0x0:0x688ff25d26368b84"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-2 hover:text-olive-200 transition-colors"
-                >
-                  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span>Casa Volpi, SMPW Q 4 Conjunto 8 Lote 05, Parte 1</span>
-                </a>
+                
               </div>
             </div>
           </div>
@@ -347,16 +290,15 @@ function Home() {
           <div className="py-6 border-t border-olive-700">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-olive-200 text-xs">
-                © 2024 Héricles & Bruna. Todos os direitos reservados.
+                © 2024 Ezequiel & Amanda. Todos os direitos reservados.
               </p>
               <a
-                href="https://www.instagram.com/labora_tech/"
+                href="https://labora-tech.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-xs text-olive-200 hover:text-olive-100 transition-colors"
               >
-                <span>Desenvolvido com ♥ por Labora Tech</span>
-                <Instagram className="w-4 h-4" />
+                <span>Desenvolvido por Labora Tech</span>
               </a>
             </div>
           </div>

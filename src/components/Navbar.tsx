@@ -14,7 +14,7 @@ function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="font-serif text-2xl text-olive-800 animate-gentle-wave">
-              H & B
+              E & A
             </Link>
           </div>
 

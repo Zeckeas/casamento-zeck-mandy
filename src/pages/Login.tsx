@@ -28,31 +28,44 @@ function Login() {
     }
   };
 
+  
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-
+  
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password
       });
-
-      if (error) throw error;
-
+  
+      if (error) {
+        // Exibe uma mensagem de erro mais detalhada para o usuário
+        toast.error(`Erro: ${error.message || 'Credenciais inválidas'}`);
+        throw error;
+      }
+  
       if (data.user) {
         const { data: adminData, error: adminError } = await supabase
           .from('admins')
           .select('*')
           .eq('user_id', data.user.id);
-
-        if (adminError) throw adminError;
+  
+        if (adminError) {
+          // Caso haja erro ao buscar os dados do administrador
+          toast.error(`Erro ao verificar o acesso: ${adminError.message}`);
+          throw adminError;
+        }
         
         if (!adminData || adminData.length === 0) {
+          // Se o usuário não for um administrador, realiza o logout e avisa
           await supabase.auth.signOut();
-          throw new Error('Acesso não autorizado');
+          toast.error('Acesso não autorizado. Você não tem permissão para acessar esta área.');
+          navigate('/login');
+          return;
         }
-
+  
+        // Navega para a área administrativa se o login for bem-sucedido
         navigate('/admin');
         toast.success('Login realizado com sucesso!');
       }
@@ -62,6 +75,7 @@ function Login() {
       setLoading(false);
     }
   };
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-olive-50 px-4">
