@@ -47,10 +47,10 @@ function Home() {
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-4 leading-tight font-bold tracking-wider border-b-4 border-white pb-4">
               Ezequiel & Amanda
             </h1>
-            <p className="text-xl md:text-2xl mb-12 font-light tracking-widest">06 de Setembro de 2025</p>
+            <p className="text-xl md:text-2xl mb-12 font-light tracking-widest">30 de Agosto de 2025</p>
             <div className="max-w-xs md:max-w-2xl mx-auto">
               <div className="border-none"> {/* Garantindo que não haja borda */}
-                <CountdownTimer targetDate="2025-09-06T14:30:00" />
+                <CountdownTimer targetDate="2025-08-30T14:30:00" />
               </div>
             </div>
           </div>
