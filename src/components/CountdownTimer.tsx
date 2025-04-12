@@ -51,17 +51,17 @@ function CountdownTimer({ targetDate }: Props) {
   };
 
   return (
-    <div className="grid grid-cols-4 gap-4 text-center">
+    <div className="flex justify-center gap-4 w-full px-4">
       {Object.entries(timeLeft).map(([unit, value], index) => (
         <div
           key={unit}
-          className={`bg-white bg-opacity-20 backdrop-blur-lg rounded-lg p-4 flex flex-col items-center animate-fade-scale hover-grow animate-soft-glow`}
-          style={{ animationDelay: `${index * 200}ms` }}
+          className="relative flex flex-col items-center justify-center text-white w-full max-w-[80px] sm:max-w-[100px] aspect-square bg-white/10 rounded-lg shadow-md animate-pulse-soft"
         >
-          <div className="text-2xl md:text-4xl font-bold animate-gentle-wave">
-            {value}
-          </div>
-          <div className="text-xs md:text-sm uppercase mt-2 animate-float-in" style={{ animationDelay: `${(index * 200) + 300}ms` }}>
+          {/* Animação de luz suave no fundo */}
+          <div className="absolute inset-0 rounded-lg bg-white/10 animate-pulse pointer-events-none" />
+          
+          <div className="z-10 text-lg sm:text-2xl font-bold">{value}</div>
+          <div className="z-10 text-[10px] sm:text-xs uppercase mt-1 font-light">
             {unitTranslations[unit] || unit}
           </div>
         </div>

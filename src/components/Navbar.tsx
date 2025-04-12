@@ -24,7 +24,7 @@ function Navbar() {
               { path: '/', label: 'Home' },
               { path: '/gifts', label: 'Lista de Presentes' },
               { path: '/rsvp', label: 'Confirmação' },
-              { path: '/messages', label: 'Recados' }
+              
             ].map((item, index) => (
               <Link
                 key={item.path}

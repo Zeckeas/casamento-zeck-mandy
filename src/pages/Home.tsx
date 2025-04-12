@@ -40,41 +40,54 @@ function Home() {
 
   return (
     <main className="min-h-screen">
-       {/* Hero Section */}
-        <section className="hero-section h-screen flex items-center justify-center px-4 md:px-6 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
-          <div className="relative text-center text-white w-full max-w-4xl mx-auto">
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-4 leading-tight font-bold tracking-wider border-b-4 border-white pb-4">
-              Ezequiel & Amanda
-            </h1>
-            <p className="text-xl md:text-2xl mb-12 font-light tracking-widest">30 de Agosto de 2025</p>
-            <div className="max-w-xs md:max-w-2xl mx-auto">
-              <div className="border-none"> {/* Garantindo que não haja borda */}
-                <CountdownTimer targetDate="2025-08-30T14:30:00" />
+           {/* Hero Section */}
+            <section
+              className="hero-section h-screen flex items-center justify-center px-4 md:px-6 relative overflow-hidden bg-fixed bg-center bg-cover bg-no-repeat"
+              style={{
+                backgroundImage:
+                  "url('https://res.cloudinary.com/dh3kfovpt/image/upload/v1744472313/test_wk1fjf.png')",
+              }}
+            >
+              {/* Sobreposição escura com leve gradiente */}
+              <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
+
+              {/* Conteúdo centralizado */}
+              <div className="relative text-center text-white w-full max-w-4xl mx-auto z-10">
+                <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-4 leading-tight font-bold tracking-wider border-b-4 border-white pb-4">
+                  Ezequiel & Amanda
+                </h1>
+                <p className="text-xl md:text-2xl mb-12 font-light tracking-widest">
+                  30 de Agosto de 2025
+                </p>
+                <div className="max-w-xs md:max-w-2xl mx-auto">
+                  <div className="border-none">
+                    <CountdownTimer targetDate="2025-08-30T14:30:00" />
+                  </div>
+
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </section>
+
+
+
 
 
       {/* Welcome Section - Reduced padding */}
       <section className="py-8 px-4 md:px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-olive-800 mb-4">Bem-vindos ao nosso site!</h2>
+          <h2 className="font-serif text-3xl md:text-4xl text-olive-800 mb-4">Com muito amor e alegria, te damos as boas-vindas!</h2>
           <div className="space-y-4 text-gray-600">
             <p className="text-lg md:text-xl leading-relaxed">
-              Com imensa alegria e amor em nossos corações, convidamos você para celebrar conosco 
-              um dos momentos mais especiais de nossas vidas: nosso casamento.
+            Estamos ansiosos para celebrar o nosso grande dia ao lado das pessoas que amamos.
             </p>
             <p className="text-lg md:text-xl leading-relaxed">
-              Cada detalhe deste dia foi pensado com muito carinho, e sua presença tornará esta 
-              celebração ainda mais significativa para nós.
+            Este site foi criado com carinho para que você possa acompanhar todos os detalhes da nossa celebração.
             </p>
             <div className="pt-4">
               <p className="font-serif text-2xl text-olive-600 italic">
-                "Procurar frase"
+              “O amor verdadeiro não se encontra. Ele se constrói, dia após dia.”
               </p>
-              <p className="text-sm mt-2 text-olive-600">Nome</p>
+              <p className="text-sm mt-2 text-olive-600">— Harriett Lerner</p>
             </div>
           </div>
         </div>
@@ -203,13 +216,7 @@ function Home() {
             <p className="text-gray-600 text-lg mb-10">Ficaremos muito felizes em celebrar este momento especial com você</p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8">
-            <Link
-              to="/messages"
-              className="group flex items-center gap-4 px-8 py-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto"
-            >
-              <MessageCircle className="w-6 h-6 text-olive-600 group-hover:text-olive-800 transition-colors" />
-              <span className="text-olive-800 font-medium group-hover:text-olive-900">Deixar Recado</span>
-            </Link>
+           
             <Link
               to="/rsvp"
               className="group flex items-center gap-4 px-8 py-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto"
