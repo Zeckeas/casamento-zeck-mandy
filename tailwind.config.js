@@ -5,16 +5,16 @@ export default {
     extend: {
       colors: {
         olive: {
-          50: '#F9F9F9', // Branco sujo
-          100: '#F1F1F1', // Cinza muito claro
-          200: '#D1D1D1', // Cinza suave
-          300: '#B0B0B0', // Cinza médio
-          400: '#8F8F8F', // Cinza escuro
-          500: '#6E6E6E', // Cinza mais escuro
-          600: '#4D4D4D', // Cinza profundo
-          700: '#333333', // Cinza muito escuro
-          800: '#1A1A1A', // Quase preto
-          900: '#0A0A0A', // Preto
+          50:  '#F4F8FB', // Azul serenity muito claro
+          100: '#DCEBF5', // Azul serenity leve
+          200: '#B5D5EA', // Azul serenity base
+          300: '#8DBFDF', // Azul serenity médio
+          400: '#68A5CC', // Transição para azul clássico
+          500: '#3C7BA3', // Azul serenity profundo
+          600: '#2A5D87', // Azul marinho suave
+          700: '#1F4668', // Azul marinho clássico
+          800: '#16324D', // Azul marinho escuro
+          900: '#0D2133', // Azul marinho profundo
         },
       },
       fontFamily: {     

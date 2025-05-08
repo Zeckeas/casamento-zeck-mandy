@@ -45,12 +45,10 @@ function Home() {
               className="hero-section h-screen flex items-center justify-center px-4 md:px-6 relative overflow-hidden bg-fixed bg-center bg-cover bg-no-repeat"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dh3kfovpt/image/upload/v1744472313/test_wk1fjf.png')",
+                  "url('https://res.cloudinary.com/dh3kfovpt/image/upload/v1746721065/WhatsApp_Image_2025-05-08_at_11.59.12_ynletq.jpg')",
               }}
             >
-              {/* Sobreposição escura com leve gradiente */}
-              <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
-
+              
               {/* Conteúdo centralizado */}
               <div className="relative text-center text-white w-full max-w-4xl mx-auto z-10">
                 <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl mb-4 leading-tight font-bold tracking-wider border-b-4 border-white pb-4">

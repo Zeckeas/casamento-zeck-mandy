@@ -52,21 +52,19 @@ function CountdownTimer({ targetDate }: Props) {
 
   return (
     <div className="flex justify-center gap-4 w-full px-4">
-      {Object.entries(timeLeft).map(([unit, value], index) => (
-        <div
-          key={unit}
-          className="relative flex flex-col items-center justify-center text-white w-full max-w-[80px] sm:max-w-[100px] aspect-square bg-white/10 rounded-lg shadow-md animate-pulse-soft"
-        >
-          {/* Animação de luz suave no fundo */}
-          <div className="absolute inset-0 rounded-lg bg-white/10 animate-pulse pointer-events-none" />
-          
-          <div className="z-10 text-lg sm:text-2xl font-bold">{value}</div>
-          <div className="z-10 text-[10px] sm:text-xs uppercase mt-1 font-light">
-            {unitTranslations[unit] || unit}
-          </div>
+    {Object.entries(timeLeft).map(([unit, value]) => (
+      <div
+        key={unit}
+        className="flex flex-col items-center justify-center text-white w-[60px] sm:w-[80px]"
+      >
+        <div className="text-lg sm:text-2xl font-bold">{value}</div>
+        <div className="text-[10px] sm:text-xs uppercase mt-1 font-light">
+          {unitTranslations[unit] || unit}
         </div>
-      ))}
-    </div>
+      </div>
+    ))}
+  </div>
+
   );
 }
 
